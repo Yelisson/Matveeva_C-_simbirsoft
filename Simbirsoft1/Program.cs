@@ -9,23 +9,16 @@ namespace Simbirsoft1
     class Program
     {
         private static int n = 3;
-        private static int m = 3;
         
         static void Main(string[] args)
         {
-            int[,] arr = new int[n, m];
+            int[,] arr = new int[n, n];
             for(int i = 0; i < n; i++)
             {
-                for(int j = 0; j < m; j++)
+                for(int j = 0; j < n; j++)
                 {
                     arr[i,j] = 0;
-                }
-            }
-            for (int ii = 0; ii < n; ii++)
-            {
-                for (int jj = 0; jj < m; jj++)
-                {
-                    Console.Write(arr[ii, jj] + " ");
+                    Console.Write(arr[i, j] + " ");
                 }
                 Console.WriteLine();
             }
@@ -38,16 +31,16 @@ namespace Simbirsoft1
                 int j = Int32.Parse(Console.ReadLine());
                 int num = Int32.Parse(Console.ReadLine());
 
-                if (i < 5 || i >= 0)
+                if (i < n || i >= 0)
                 {
-                    if (j < 5 || j >= 0)
+                    if (j < n || j >= 0)
                     {
                         if (num == 1 || num == 2)
                         {
                             arr[i, j] = num;
                             for (int ii = 0; ii < n; ii++)
                             {
-                                for (int jj = 0; jj < m; jj++)
+                                for (int jj = 0; jj < n; jj++)
                                 {
                                     Console.Write(arr[ii, jj] + " ");
                                 }
@@ -83,14 +76,14 @@ namespace Simbirsoft1
             for (int i = 0; i < n; i++)
             {
                 int count = 0;
-                for (int j = m - 1; j > 0; j--)
+                for (int j = n - 1; j > 0; j--)
                 {
                     if (arr[j, i] == arr[j - 1, i] && arr[j, i] != 0)
                     {
                         count++;
                     }
                 }
-                if (count == m - 1)
+                if (count == n - 1)
                 {
                     return true;
                 }
@@ -99,14 +92,14 @@ namespace Simbirsoft1
             for (int i = 0; i < n; i++)
             {
                 int count = 0;
-                for (int j = m - 1; j > 0; j--)
+                for (int j = n - 1; j > 0; j--)
                 {
                     if (arr[i, j] == arr[i,j - 1] && arr[i,j]!=0)
                     {
                         count++;
                     }
                 }
-                if (count == m-1)
+                if (count == n-1)
                 {
                     return true;
                 }
