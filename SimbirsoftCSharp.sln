@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimbirsoftCSharp", "SimbirsoftCSharp\SimbirsoftCSharp.csproj", "{B4EA7E0A-843E-42B2-9E49-3DCE0CCD3F6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simbirsoft1", "Simbirsoft1\Simbirsoft1.csproj", "{34E3ECA1-D362-458D-86F0-F0E0437A0A34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4EA7E0A-843E-42B2-9E49-3DCE0CCD3F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4EA7E0A-843E-42B2-9E49-3DCE0CCD3F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4EA7E0A-843E-42B2-9E49-3DCE0CCD3F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4EA7E0A-843E-42B2-9E49-3DCE0CCD3F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E3ECA1-D362-458D-86F0-F0E0437A0A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E3ECA1-D362-458D-86F0-F0E0437A0A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E3ECA1-D362-458D-86F0-F0E0437A0A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E3ECA1-D362-458D-86F0-F0E0437A0A34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
