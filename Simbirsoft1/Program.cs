@@ -31,21 +31,27 @@ namespace Simbirsoft1
                 int j = Int32.Parse(Console.ReadLine());
                 int num = Int32.Parse(Console.ReadLine());
 
-                if (i < n || i >= 0)
+                if (i < n && i >= 0)
                 {
-                    if (j < n || j >= 0)
+                    if (j < n && j >= 0)
                     {
                         if (num == 1 || num == 2)
                         {
-                            arr[i, j] = num;
-                            for (int ii = 0; ii < n; ii++)
+                            if (arr[i, j] == 0)
                             {
-                                for (int jj = 0; jj < n; jj++)
+                                arr[i, j] = num;
+                                for (int ii = 0; ii < n; ii++)
                                 {
-                                    Console.Write(arr[ii, jj] + " ");
+                                    for (int jj = 0; jj < n; jj++)
+                                    {
+                                        Console.Write(arr[ii, jj] + " ");
+                                    }
+                                    Console.WriteLine();
                                 }
-                                Console.WriteLine();
-                            }
+                            }else
+                            {
+                                Console.WriteLine("Ячейка занята");
+                            }                       
                         }
                         else
                         {
@@ -54,12 +60,12 @@ namespace Simbirsoft1
                     }
                     else
                     {
-                        Console.WriteLine("Введите значения от 0 до 4");
+                        Console.WriteLine("Введите значения от 0 до "+n);
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Введите значения от 0 до 4");
+                    Console.WriteLine("Введите значения от 0 до "+n);
                 }
                 completed = isCompleted(arr);
             } while (!completed);
