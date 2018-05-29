@@ -9,7 +9,7 @@ namespace Simbirsoft1
    public interface InterfaceGameDescription
     {
         void fixNextStep(int i,int j, int num);
-        bool isCompleted();
+        string isCompleted();
         void initMatrix();
     }
 }

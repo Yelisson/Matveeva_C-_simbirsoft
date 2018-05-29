@@ -66,7 +66,7 @@ namespace Simbirsoft1
             }
         }
 
-        public bool isCompleted()
+        public string isCompleted()
         {
             //проверяем одинаковые элементы в столбце
             for (int i = 0; i < n; i++)
@@ -78,11 +78,12 @@ namespace Simbirsoft1
                     {
                         count++;
                     }
+                    if (count == n - 1)
+                    {
+                        return "Player "+arr[i,j];
+                    }
                 }
-                if (count == n - 1)
-                {
-                    return true;
-                }
+               
             }
             //проверяем одинаковые элементы в строке
             for (int i = 0; i < n; i++)
@@ -94,11 +95,12 @@ namespace Simbirsoft1
                     {
                         count++;
                     }
+                    if (count == n - 1)
+                    {
+                        return "Player " + arr[i, j];
+                    }
                 }
-                if (count == n - 1)
-                {
-                    return true;
-                }
+               
             }
             //диагонали
             int c = 0;
@@ -110,7 +112,7 @@ namespace Simbirsoft1
                 }
                 if (c == n - 1)
                 {
-                    return true;
+                    return "Player " + arr[i, i];
                 }
             }
             int k = 0;
@@ -122,10 +124,25 @@ namespace Simbirsoft1
                 }
                 if (k == n - 1)
                 {
-                    return true;
+                    return "Player " + arr[i, n-i-1];
                 }
             }
-            return false;
+            int l = 0;
+            for(int i = 0; i < n; i++)
+            {
+                for(int j = 0; j < n; j++)
+                {
+                    if (arr[i, j] != 0)
+                    {
+                        l++;
+                    }
+                }
+            }
+            if (l == n * n)
+            {
+                return "Ничья";
+            }
+            return null;
         }
     }
 }

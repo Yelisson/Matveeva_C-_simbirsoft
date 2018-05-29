@@ -14,7 +14,7 @@ namespace Simbirsoft1
     {
         private GameLogic game=new GameLogic();     
         public static int n = 3;
-
+        readonly GameContext context = new GameContext();
         public FormGame()
         {
             InitializeComponent();
@@ -89,7 +89,14 @@ namespace Simbirsoft1
                                     pictureBox.Refresh();
                                     if (complete())
                                     {
-                                        MessageBox.Show("Вы выиграли!");
+                                        MessageBox.Show("Игра окончена. Победитель: " + game.isCompleted(), "Конец", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                        context.GamesInfos.Add(new Models.GameInfo
+                                        {
+                                            GameDate = DateTime.Now,
+                                            Winner = game.isCompleted()
+                                        });
+                                        context.SaveChanges();                                      
                                     }
                                 }
                                 else
@@ -121,7 +128,7 @@ namespace Simbirsoft1
         }
         public bool complete()
         {
-            if (game.isCompleted())
+            if (game.isCompleted()!=null)
             {
                 return true;
             }
