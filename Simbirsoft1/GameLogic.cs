@@ -26,7 +26,7 @@ namespace Simbirsoft1
                 }
             }
         }
-        public void fixNextStep(int i, int j, int num)
+        public bool fixNextStep(int i, int j, int num)
         {
             try
             {
@@ -39,31 +39,37 @@ namespace Simbirsoft1
                             if (arr[i, j] == 0)
                             {
                                 arr[i, j] = num;
+                                return true;
                             }
                             else
                             {
                                 Console.WriteLine("Ячейка занята");
+                                return false;
                             }
                         }
                         else
                         {
                             Console.WriteLine("Введено неверное значение!");
+                            return false;
                         }
                     }
                     else
                     {
                         Console.WriteLine("Введите значения от 0 до " + n);
+                        return false;
                     }
                 }
                 else
                 {
                     Console.WriteLine("Введите значения от 0 до " + n);
+                    return false;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+            return false;
         }
 
         public string isCompleted()

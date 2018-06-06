@@ -8,7 +8,7 @@ namespace Simbirsoft1
 {
    public interface InterfaceGameDescription
     {
-        void fixNextStep(int i,int j, int num);
+        bool fixNextStep(int i,int j, int num);
         string isCompleted();
         void initMatrix();
     }
